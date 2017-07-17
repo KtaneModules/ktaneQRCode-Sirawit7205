@@ -1,0 +1,1 @@
+QR Code needy module for KTaNE
