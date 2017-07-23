@@ -53,12 +53,13 @@ public class QRCode : MonoBehaviour
 
             if(input == QRMessage.ToString())
             {
-                Module.OnPass();
+                Module.HandlePass();
                 Debug.LogFormat("[NeedyQRCode #{0}] Answer correct! Module passed!", _moduleId);
             }
             else
             {
-                Module.OnStrike();
+                Module.HandleStrike();
+                Module.HandlePass();
                 Debug.LogFormat("[NeedyQRCode #{0}] Answer incorrect! Strike!", _moduleId);
             }
             input = null;
