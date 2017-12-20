@@ -13,5 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: QRCode
   title: QR Code
-  version: 1.0
+  description: "You will need a QR code scanner application to complete this module.
+    Not the best idea for defuser but I really want to try a new idea here.\r\n\r\nModule
+    ID: QRCode\r\n\r\nHTML manual: https://ktane.timwi.de/HTML/QR%20Code.html\r\nPDF
+    manual: https://ktane.timwi.de/PDF/QR%20Code.pdf"
+  version: 2.0
   outputFolder: build
+  previewImage: {fileID: 2800000, guid: 74bd067260be3ad4da094be2ac6cc482, type: 3}
