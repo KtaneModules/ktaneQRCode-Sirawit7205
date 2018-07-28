@@ -34,13 +34,13 @@ public class QRCode : MonoBehaviour
             int j = i;
             btn[i].OnInteract += delegate ()
             {
-                handlePress(j);
+                HandlePress(j);
                 return false;
             };
         }
     }
 
-    void handlePress(int n)
+    void HandlePress(int n)
     {
         Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, btn[n].transform);
         btn[n].AddInteractionPunch();
