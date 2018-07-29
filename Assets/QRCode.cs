@@ -107,6 +107,10 @@ public class QRCode : MonoBehaviour
         _isReady = false;
     }
 
+#pragma warning disable 414
+    private readonly string TwitchHelpMessage = @"Submit the answer with “!{0} submit (answer)”.";
+#pragma warning restore 414
+
     KMSelectable[] ProcessTwitchCommand(string command)
     {
         var btns = new List<KMSelectable>();
