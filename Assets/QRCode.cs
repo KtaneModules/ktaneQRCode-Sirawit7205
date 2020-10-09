@@ -17,7 +17,7 @@ public class QRCode : MonoBehaviour
 
     private static int _moduleIdCounter = 1;
     private int _moduleId;
-    private string input = null;
+    private string input = string.Empty;
 
     void Start()
     {
@@ -62,7 +62,7 @@ public class QRCode : MonoBehaviour
                 Module.HandlePass();
                 Debug.LogFormat("[NeedyQRCode #{0}] Answer incorrect! Strike!", _moduleId);
             }
-            input = null;
+            input = string.Empty;
             OnNeedyDeactivation();
         }
     }
@@ -87,6 +87,8 @@ public class QRCode : MonoBehaviour
 
         QR.material.mainTexture = encoded;
         QR.enabled = true;
+        
+        input = string.Empty;   //clear any pending inputs from last round
 
         _isReady = true;
 
